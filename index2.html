@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Home</title>
+	   <!--<link rel="stylesheet" href="index.css">-->
+
+       <!--Meta Data-->
+        <meta name="author" content="Columbus Dong" />
+        <meta name="description" content="T" />
+        <meta name="keywords" content="" />
+
+        <style type="text/css">
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .border {
+                background-color: #5b97d4;
+            }
+
+            @font-face {
+                font-family: Digital;
+                src: url(Digital_tech.otf);
+            }
+            /*Top Section Start*/
+            #top {
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+                height: 50px;
+                clear: both;
+            }
+
+            #btnclose {
+                background-color: #FF0000;
+                padding-right: 5px;
+                margin: 0px;
+                float: right;
+                width: 5%;
+                height: 40px;
+            }
+
+            #btnmax {
+                background-color: #395c80;
+                margin: 0px;
+                float: right;
+                width: 5%;
+                height: 40px;
+            }
+
+            #btnmin {
+                background-color: #395c80;
+                margin: 0px;
+                float: right;
+                width: 5%;
+                height: 40px;
+            }
+
+            #copyright {
+                padding-left: 5px;
+                margin:  0px;
+                font-size: 25px;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            /*Top Section End*/
+
+            /*Middle Section Start*/
+            #middle {
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+                height: 900px;
+            }
+
+            #left {
+                padding: 0px;
+                margin: 0px;
+                float: left;
+                width: 2.5%;
+                height: 900px;
+                z-index: 1;
+            }
+
+            #right {
+                padding: 0px;
+                margin: 0px;
+                float: right;
+                width: 3%;
+                height: 900px;
+            }
+
+            #foreground {
+                background-color: #01050d;
+                padding: 0px;
+                position: relative;
+                left: 2.5%;
+                width: 94.5%;
+                height: 900px;
+            }
+            /*Middle Section End*/
+
+            /*Foreground Section*/
+            #titlepane {
+                width: 100%;
+                height: 200px;
+                background-color: #232123;
+            }
+
+            #title {
+                font-family: Digital;
+                font-size: 7.5em;
+                padding: 0px;
+                margin: 0px;
+                text-align: left;
+                width: 100%;
+                color: #12d00d;
+            }
+
+            #hrtitle {
+                width: 95%;
+                color: #12d00d;
+                background-color: #12d00d;
+                border: none;
+                padding: 0px;
+                margin: 0px;
+                height: 10px;
+                text-align: left;
+                position: relative;
+                left: -1%;
+            }
+			
+			#contentpane {
+				width: 65%;
+				float: left;
+				background-color: #232123;
+				height: 700px;
+				position: relative;
+				left: -1.5%;
+				padding: 0px;
+				margin: 0px;
+				
+			}
+			
+			#sidepane {
+				width: 32%;
+				float: right;
+				background-color: #239021;
+				height: 700px;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			#organizeside {
+				width: 100%;
+				height: 700px;
+				font-size: 2em;
+				vertical-align: top;
+			}
+			
+			ul {
+				text-align: center;
+				display: inline;
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+				-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+				-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+			}
+			
+			ul li {
+				display: inline-block:
+				position: relative;
+				background: #232123;
+				cursor: pointer;
+				-webkit-transition: all 0.2s;
+				-moz-transition: all 0.2s;
+				-ms-transition: all 0.2s;
+				-o-transition: all 0.2s;
+				transition: all 0.2s;
+			}
+			
+			ul li:hover {
+				background-color: #232123;
+				color: #00FFFF;
+			}
+			
+			ul li ul {
+				padding: 0px;
+				position: abolsute;
+				top: 500pxx;
+				left: 0px;
+				width: 100%;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+				display: none;
+				opacity: 0;
+				visibility: hidden;
+				-webkit-transiton: opacity 0.2s;
+				-moz-transition: opacity 0.2s;
+				-ms-transition: opacity 0.2s;
+				-o-transition: opacity 0.2s;
+				-transition: opacity 0.2s;
+			}
+			
+			ul li ul li { 
+				background: #232123; 
+				display: block; 
+				color: #00FFFF;
+			}
+			
+			ul li ul li:hover { background: #666; }
+			
+			ul li:hover ul {
+				display: block;
+				opacity: 1;
+				visibility: visible;
+			}
+        </style>
+    </head>
+
+    <body>
+        <!--Top Portion of Screen-->
+        <div id = "top" class = "border">
+            <div id = "btnclose"><p class = "special">X</p></div>
+            <div id = "btnmax"></div>
+            <div id = "btnmin"></div>
+            <p id = "copyright">&#169; 2015 Columbus Dong</p>
+        </div>
+
+        <!--Middle Portion of Screen-->
+        <div id = "middle">
+            <!--Left Border-->
+            <div id = "left" class = "border"></div>
+            <!--Right Border-->
+            <div id = "right" class = "border"></div>
+            <!--Middle Area-->
+            <div id = "foreground">
+                <div id = "titlepane">
+		
+                    <p id = "title">Viruses and Malware</p>
+                    <hr id = "hrtitle" />
+                </div>
+				<div id = "contentpane">
+				
+				</div>
+				
+				<div id = "sidepane">
+					<table id = "organizeside">
+						<tr>
+							<td style = "vertical-align: top;">
+								<ul>
+									<li>
+										Navigation
+										
+										<ul>
+											<li>Viruses and Malware</li>
+											<li>Goal of Viruses</li>
+											<li>Getting Rid of Viruses</li>
+											<li>About the Creator</li>
+										</ul>
+									</li>
+								</ul>
+							<td>
+						</tr>
+						
+						<tr>
+						
+						</tr>
+						
+						<tr>
+						
+						</tr>
+						
+						<tr>
+						
+						</tr>
+					</table>
+				</div>
+				
+            </div>
+            
+        </div>
+    </body>
+</html>
